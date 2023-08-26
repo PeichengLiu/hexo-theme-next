@@ -9,6 +9,7 @@
   <noscript>
     <link rel="stylesheet" href="{{ url_for(theme.css) }}/noscript.css">
   </noscript>
+  <script src="https://code.bdstatic.com/npm/pjax@0.2.8/pjax.min.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage"{% if theme.motion.enable %} class="use-motion"{% endif %}>
@@ -37,6 +38,25 @@
       {{ partial('_partials/footer.njk', {}, {cache: theme.cache.enable}) }}
     </div>
   </footer>
+
+  <link rel="stylesheet" href="https://code.bdstatic.com/npm/aplayer@1.10.1/dist/APlayer.min.css">	
+  <script src="https://code.bdstatic.com/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>	
+  <script src="https://code.bdstatic.com/npm/meting@2.0.1/dist/Meting.min.js"></script>
+  <div>	
+  <meting-js 	
+    server="netease" 	
+    type="playlist"	
+    id="4879931134"	
+    fixed="true"	
+    autoplay="false"	
+    loop="all"	
+    order="random"	
+    preload="auto"	
+    list-folded="ture"	
+    list-max-height="500px"	
+    lrc-type="1">	
+  </meting-js>		
+  </div>
 
   {{ partial('_partials/widgets.njk', {}, {cache: theme.cache.enable}) }}
 
