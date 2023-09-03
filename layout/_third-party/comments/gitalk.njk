@@ -2,6 +2,6 @@
 
 {{ next_data('gitalk', theme.gitalk, {
   js: theme.vendors.gitalk_js,
-  path_md5: gitalk_md5(page.path)
+  path_md5: path_md5(page.path)
 }) }}
 {{ next_js('third-party/comments/gitalk.js') }}

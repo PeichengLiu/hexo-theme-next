@@ -92,7 +92,7 @@ hexo.extend.helper.register('post_edit', function(src) {
   });
 });
 
-hexo.extend.helper.register('gitalk_md5', function(path) {
+hexo.extend.helper.register('path_md5', function(path) {
   const str = this.url_for(path);
   return crypto.createHash('md5').update(str).digest('hex');
 });
